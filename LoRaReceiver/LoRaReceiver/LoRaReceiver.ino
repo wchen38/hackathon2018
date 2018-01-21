@@ -105,14 +105,14 @@ void loop() {
 
       display.setTextAlignment(TEXT_ALIGN_LEFT);
       display.setFont(ArialMT_Plain_10);
-      display.drawString(0, 11, String("Temp: ") + token0);
-      display.drawString(0, 21, String("RH    : ") + token1);
-      display.drawString(0, 31, String("CO2  : ") + token2);
+      display.drawString(0, 11, String("Temp: ") + token0 + String(" C"));
+      display.drawString(0, 21, String("RH    : ") + token1 + String("%"));
+      display.drawString(0, 31, String("CO2  : ") + token2 + String("ppm"));
       display.drawString(0, 41, String("CO    : ") + token3);
       display.display();
 
       
-      if(co2 >= 40 || co >= 250){
+      if(co2 >=100  || co >= 400){
         digitalWrite(LED, HIGH);
        // delay(100);  
       }else{
